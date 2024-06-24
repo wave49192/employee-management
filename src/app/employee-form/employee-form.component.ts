@@ -18,10 +18,7 @@ export class EmployeeFormComponent {
     private fb: FormBuilder
   ) {
     this.form = this.fb.group({
-      id: [
-        { value: data ? data.id : '', disabled: !!data },
-        Validators.required,
-      ],
+      id: [data ? data.id : '', Validators.required],
       name: [data ? data.name : '', Validators.required],
       phone: [data ? data.phone : '', [Validators.required]],
       position: [data ? data.position : '', Validators.required],
