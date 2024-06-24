@@ -38,7 +38,6 @@ input[type="text"]:focus,
 select:focus {
     outline: none;
     border-color: #4caf50;
-
 }
 
 button[type="submit"],
@@ -52,13 +51,11 @@ button[type="button"] {
 
 .btn-primary {
     background-color: #4caf50;
-
     color: white;
 }
 
 .btn-secondary {
     background-color: #ccc;
-
     color: black;
 }
 
