@@ -1,0 +1,32 @@
+<!-- src/app/employee-list/employee-list.component.html -->
+<div class="content">
+    <div class="heading">
+        <h1>รายชื่อพนักงาน</h1>
+
+        <button class="add-button" (click)="openDialog()">เพิ่ม</button>
+
+    </div>
+    <table class="employee-table">
+        <thead>
+            <tr>
+                <th>รหัสพนักงาน</th>
+                <th>ชื่อ-นามสกุล</th>
+                <th>เบอร์โทร</th>
+                <th>ตำแหน่ง</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{ employee.id }}</td>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.phone }}</td>
+                <td>{{ employee.position }}</td>
+                <td class="action-button">
+                    <button class="edit-button" (click)="openDialog(employee)">แก้ไข</button>
+                    <button class="delete-button" (click)="deleteEmployee(employee.id)">ลบ</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
