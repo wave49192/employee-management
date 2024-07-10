@@ -20,7 +20,7 @@
             <tr *ngFor="let employee of employees">
                 <td>{{ employee.id }}</td>
                 <td>{{ employee.name }}</td>
-                <td>{{ employee.phone }}</td>
+                <td>{{ formatPhoneNumber(employee.phone) }}</td>
                 <td>{{ employee.position }}</td>
                 <td class="action-button">
                     <button class="edit-button" (click)="openDialog(employee)">แก้ไข</button>

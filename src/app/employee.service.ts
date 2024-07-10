@@ -9,7 +9,7 @@ export class EmployeeService {
     {
       id: '1100316',
       name: 'สมชาย ใจดี',
-      phone: '095-256-2026',
+      phone: '0952562026',
       position: 'โปรแกรมเมอร์',
     },
   ];

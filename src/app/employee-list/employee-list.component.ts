@@ -50,4 +50,16 @@ export class EmployeeListComponent implements OnInit {
       this.employees = this.employeeService.getEmployees();
     }
   }
+
+  formatPhoneNumber(phoneNumber: string): string {
+    if (phoneNumber.length !== 10) {
+      return phoneNumber; // Return the original phone number if it doesn't have exactly 10 digits
+    }
+
+    const part1 = phoneNumber.slice(0, 3);
+    const part2 = phoneNumber.slice(3, 6);
+    const part3 = phoneNumber.slice(6, 10);
+
+    return `${part1}-${part2}-${part3}`;
+  }
 }
